@@ -1,0 +1,83 @@
+<form [formGroup]="detailForm" (ngSubmit)="removePatient()">
+    <div class="addPatientCard">
+        <mat-card>
+            <div class="addPatient">
+                <div class="card-container">
+                    <mat-card-title > DUMBLEDORE, Albus</mat-card-title>                    
+                    <div class="appoitmentType" (click)="close()"><mat-icon class="icon-display">close</mat-icon> </div>
+                </div>
+             
+                <mat-divider inset></mat-divider>
+                <mat-card-content>
+                    <div class="card-container">
+                        <mat-card-title > Patient Name </mat-card-title>
+                        <div class="appoitmentType"> {{patientDetails[0].PatientName}} </div>
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > Appointment Type </mat-card-title>
+                        <div class="appoitmentType"> {{patientDetails[0].AppointmentType}}  </div>                       
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > Appointment Reason </mat-card-title>
+                        <div class="appoitmentType"> {{patientDetails[0].AppointmentReason}} </div>                        
+                    </div>  
+                    <div class="card-container">
+                        <mat-card-title > Severity  </mat-card-title>
+                        <div class="appoitmentType"> {{patientDetails[0].Severity}} </div>                        
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > Phone Number  </mat-card-title>
+                        <div class="appoitmentType"> {{patientDetails[0].PhoneNumber}}</div>                        
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > Added By </mat-card-title>
+                        <div class="appoitmentType">  {{patientDetails[0].AddedBy}} </div>                        
+                    </div>                  
+                </mat-card-content>
+              
+                <mat-divider inset></mat-divider>
+                <br>               
+                <mat-card-content>
+                    <div class="addPatientForm">   
+                        <mat-card-title>Notes</mat-card-title> 
+                    <mat-form-field class="example-full-width" appearance="fill"  >                    
+                        <textarea matInput rows="5" cols="40" placeholder="Enter Note" formControlName="notes"></textarea>
+                      </mat-form-field>                    
+                    </div>
+                </mat-card-content>
+                <mat-divider inset></mat-divider>
+                <br>
+                <mat-card-content>
+                    <mat-card-title>Activity Log</mat-card-title> 
+                    <div class="card-container">
+                        <mat-card-title > 8:21 AM </mat-card-title>
+                        <mat-card-title > 10/29/22 </mat-card-title>
+                        <div class="appoitmentType"> Add back to waitlist </div>
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > 8:21 AM </mat-card-title>
+                        <mat-card-title > 10/29/22 </mat-card-title>
+                        <div class="appoitmentType"> Declined offer </div>            
+                    </div>
+                    <div class="card-container">
+                        <mat-card-title > 8:21 AM </mat-card-title>
+                        <mat-card-title > 10/29/22 </mat-card-title>
+                        <div class="appoitmentType"> Sent offer </div>                     
+                    </div>                     
+                </mat-card-content>
+
+                <mat-divider inset></mat-divider>
+                <br>
+                <mat-card-content>
+                    <div class="addPatientForm"> 
+                    <!-- <button mat-raised-button class="addPatientButton" style="background-color: gray;" [disabled]="profileForm.invalid">Add Patient</button>                             -->
+                    <button mat-raised-button class="removePatientButton" [disabled]="detailForm.invalid"  >Remove Patient</button>                 
+                    </div>
+                </mat-card-content>            
+            </div>
+        </mat-card>
+    </div>
+    </form>
+    
+    
+    

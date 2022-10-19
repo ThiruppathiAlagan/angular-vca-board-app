@@ -1,0 +1,33 @@
+.some-button {
+  width: 200px;
+  height: 50px;
+}
+
+.some-text {
+  float: left;
+  margin-left: 10px;
+}
+
+.some-icon {
+  float: right;
+  margin-right: 10px;
+}
+
+.card-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-input-underline {
+  display: none;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.icon-display {
+  transform: scale(0.8) !important;
+  color: #174A96;
+}

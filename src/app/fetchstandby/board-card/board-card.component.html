@@ -1,0 +1,23 @@
+<div *ngFor="let item of appointment.items">
+    <mat-card class="items" cdkDrag [cdkDragDisabled]="appointment.dragDisabled">
+        <mat-card-content>
+            <div class="boardContent">
+                <div class="dragHandle" *ngIf="appointment.allowDrag">
+                    <mat-icon cdkDragHandle aria-hidden="false"
+                        aria-label="Example drag_indicator icon" fontIcon="drag_indicator">
+                    </mat-icon>
+                </div>
+                <div class="boardDetails">
+                    <p class="client"><span>{{item.firstName}}, </span>{{item.lastName}}</p>
+                    <p class="patient">{{item.patientName}}</p>
+                    <p class="appoitmentType">{{item.appointmentType}}</p>
+                </div>
+                <div class="infoPadge">
+                    <mat-icon cdkDragHandle aria-hidden="false"
+                        aria-label="Example drag_indicator icon" fontIcon="info">
+                    </mat-icon>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

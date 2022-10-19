@@ -1,0 +1,56 @@
+<app-header (isNewPatientClicked)="OpenNewPatientPanel($event)" (isWaitListChecked)="isWaitListChecked($event)">
+</app-header>
+<div [ngClass]="(showAddNewPatientPanel || showPatientDetailPanel)?'displayFlex':''">
+    <div class="appBoard" [ngClass]="(showAddNewPatientPanel || showPatientDetailPanel) ?'appBoardWidth':''">
+        <div *ngFor="let board of boards; let boardIndex = index;" class="board" cdkDropList
+            [cdkDropListData]="board.appointments" (cdkDropListDropped)="onTrackDrop($event)"
+            cdkDropListOrientation="horizontal">
+
+            <div class="card-list mat-elevation-z1"
+                *ngFor="let appointment of board.appointments; let trackIndex = index;">
+                <div class="row" fxLayoutAlign="start center">
+                    <mat-card class="bordtitle {{appointment.styleclass}}">
+                        <mat-card-title-group>
+                            <mat-card-title>{{appointment.title}}</mat-card-title>
+                            <div class="itemCount" matBadge="{{appointment.count}}" matBadgeSize="medium">
+                            </div>
+                        </mat-card-title-group>
+                    </mat-card>
+                </div>
+                <div class="card-list-content" cdkDropList [id]="appointment.id" [cdkDropListData]="appointment.items"
+                    [cdkDropListConnectedTo]="trackIds(boardIndex)" (cdkDropListDropped)="onTalkDrop($event)">
+                    <div *ngFor="let item of appointment.items">
+                        <mat-card class="items" cdkDrag [cdkDragDisabled]="getDrageEnabledOrNot(appointment.dragDisabled)">
+                            <mat-card-content>
+                                <div class="boardContent">
+                                    <div class="dragHandle" *ngIf="appointment.allowDrag">
+                                        <mat-icon cdkDragHandle aria-hidden="false"
+                                            aria-label="Example drag_indicator icon" fontIcon="drag_indicator">
+                                        </mat-icon>
+                                    </div>
+                                    <div class="boardDetails">
+                                        <p class="client"><span>{{item.firstName}}, </span>{{item.lastName}}</p>
+                                        <p class="patient">{{item.patientName}}</p>
+                                        <p class="appoitmentType">{{item.appointmentType}}</p>
+                                    </div>
+                                    <div class="infoPadge">
+                                        <mat-icon aria-hidden="false" aria-label="Example drag_indicator icon"
+                                            fontIcon="info"  (click)="showDetails()">
+                                        </mat-icon>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div *ngIf="showAddNewPatientPanel">
+        <app-add-patient (isNewPatientClosed)="newPatientClose($event)"></app-add-patient>
+    </div>
+    <div *ngIf="showPatientDetailPanel">
+        <app-detail-patient (isDetailPatientClosed)="detailPatientClose($event)" ></app-detail-patient>
+    </div>
+</div>

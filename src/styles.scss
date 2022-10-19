@@ -1,0 +1,329 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // font-family: 'Avenir LT Pro' !important;
+}
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toggleSwitch {
+    color: green;
+}
+
+.mat-slide-toggle-content {
+    // font-family: 'Avenir LT Pro' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #FFF;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #1FBE7B;
+}
+
+.mat-slide-toggle-bar {
+    width: 35px !important;
+    height: 24px !important;
+    border-radius: 20px !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    font-family: auto;
+    padding-left: 8px
+}
+
+.mat-slide-toggle-thumb-container {
+    top: 2px !important;
+    left: 5px !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar:before {
+    content: "\f00c";
+    font: normal normal bold 12px/1 FontAwesome;
+}
+
+.mattoolbar {
+    background: #FFFFFF;
+    // padding-top: 1% !important;
+}
+
+.addPatientButton {
+    background: #174A96;
+    border-radius: 100px !important;
+    color: #FFF;
+    // right: 50px;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 17px;
+    line-height: 17px;
+}
+
+.appBoard {
+    background-color: #F7F6F9;
+    height: 100vh;
+    display: flex;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.appBoardWidth {
+    width: 75% !important;
+}
+
+.addPatientWidth {
+    width: 20% !important;
+}
+
+.mat-card-title {
+    font-size: 16px !important;
+    font-weight: 450 !important;
+
+}
+
+.bordtitle {
+    height: 20px !important;
+    padding-right: 25px !important;
+    border-radius: 8px !important;
+    box-shadow: unset !important;
+}
+
+.UnfilledCancellations {
+    background: rgba(171, 88, 162, 0.15);
+    color: #AB58A2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.UnfilledCancellations .mat-badge-content {
+    background: #AB58A2;
+}
+
+.Urgent {
+    background: rgba(244, 67, 54, 0.15);
+    color: #F44336;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.Urgent .mat-badge-content {
+    background: #F44336;
+}
+
+.Semi-Urgent {
+    background: rgba(242, 165, 75, 0.21);
+    color: #F26B4B;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.Semi-Urgent .mat-badge-content {
+    background: #F26B4B;
+}
+
+.Non-Urgent {
+    background: rgba(135, 160, 194, 0.3);
+    color: #174A96;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.Non-Urgent .mat-badge-content {
+    background: #174A96;
+}
+
+.matCardHeader {
+    display: flex;
+}
+
+.mat-badge.mat-badge {
+    margin-top: 10px;
+}
+
+.items {
+    margin-top: 20px;
+    height: 90px;
+    padding: unset !important;
+    border-radius: 8px !important;
+}
+
+.boardContent {
+    display: flex;
+}
+
+.dragHandle {
+    width: 24px;
+    background: #FAFAFA;
+    height: 90px;
+    padding: unset !important;
+    border-radius: 8px;
+    width: 10%;
+}
+
+.dragHandle .mat-icon {
+    margin-top: 35px;
+
+}
+
+.boardDetails {
+    padding: 5px;
+    height: 90px;
+    width: 80%;
+}
+
+.boardDetails p {
+    margin: 3px 6px 2px;
+}
+
+.client {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2D2B26;
+}
+
+.patient {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2D2B26;
+}
+
+.appoitmentType {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2D2B26;
+}
+
+.infoPadge {
+    position: relative;
+    width: 10%;
+    color: #959391;
+    margin-top: 60px;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.addPatientCard {
+    background-color: #F7F6F9;
+    box-shadow: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+    width: 350px;
+    padding-left: 1%;
+    padding-top: 5%;
+    padding-right: 15px;
+}
+
+.addPatient {
+    background-color: #fff;
+    // height: 100vh;
+
+}
+
+.mat-divider.mat-divider-inset {
+    margin-left: unset !important;
+}
+
+.addPatient mat-card-title {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.mat-form-field {
+    display: block !important;
+}
+
+.addPatientForm input {
+    width: 372px;
+    // height: 44px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background: #FFF !important;
+}
+
+.mat-form-field {
+    // padding: 10px 16px !important;
+    border: 1px solid #DADADA !important;
+    border-radius: 6px !important;
+    margin-top: 12px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: unset !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 6px 6px 6px 6px !important;
+    padding: 0.75em 0.75em 0 0.75em !important;
+}
+
+.mat-form-field-infix {
+    border-top: unset !important;
+}
+
+
+.severity-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .severity-radio-button {
+    margin: 5px;
+  }
+  .removePatientButton {
+    background: #F26B4B;
+    border-radius: 100px !important;
+    color: #FFF;    
+    font-style: normal;
+    font-weight: 450;
+    font-size: 17px;
+    line-height: 17px;
+}
+.card-container {
+    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+  .icon-display {
+    transform: scale(0.8) !important;
+    color: #174A96;
+  }

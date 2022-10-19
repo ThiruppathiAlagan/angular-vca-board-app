@@ -1,0 +1,79 @@
+[
+    {
+        "title": "board",
+        "appointments": [
+            {
+                "id": "Unfilled-Cancellations",
+                "title": "Unfilled Cancellations",
+                "styleclass": "UnfilledCancellations",
+                "count": 88,
+                "dragDisabled": true,
+                "allowDrag": false,
+                "isAddNewPatientPanel": false,
+                "items": [
+                    {
+                        "appointmentTime": "2022-04-11 22: 24: 08.717",
+                        "firstName": "BASTA",
+                        "lastName": "Kierra",
+                        "patientName": "Kadin",
+                        "appointmentType": "Sick"
+                    }
+                ]
+            },
+            {
+                "id": "Urgent",
+                "title": "Urgent",
+                "styleclass": "Urgent",
+                "count": 88,
+                "dragDisabled": false,
+                "allowDrag": true,
+                "isAddNewPatientPanel": false,
+                "items": [
+                    {
+                        "appointmentTime": "2022-04-11 22: 24: 08.717",
+                        "firstName": "Urgent",
+                        "lastName": "Client",
+                        "patientName": "Kadin",
+                        "appointmentType": "Sick"
+                    }
+                ]
+            },
+            {
+                "id": "Semi-Urgent",
+                "title": "Semi Urgent",
+                "styleclass": "Semi-Urgent",
+                "count": 88,
+                "dragDisabled": false,
+                "allowDrag": true,
+                "isAddNewPatientPanel": false,
+                "items": [
+                    {
+                        "appointmentTime": "2022-04-11 22: 24: 08.717",
+                        "firstName": "BASTA",
+                        "lastName": "Kierra",
+                        "patientName": "Kadin",
+                        "appointmentType": "Sick"
+                    }
+                ]
+            },
+            {
+                "id": "Non-Urgent",
+                "title": "Non Urgent",
+                "styleclass": "Non-Urgent",
+                "count": 88,
+                "dragDisabled": false,
+                "allowDrag": true,
+                "isAddNewPatientPanel": false,
+                "items": [
+                    {
+                        "appointmentTime": "2022-04-11 22: 24: 08.717",
+                        "firstName": "BASTA",
+                        "lastName": "Kierra",
+                        "patientName": "Kadin",
+                        "appointmentType": "Sick"
+                    }
+                ]
+            }
+        ]
+    }
+]

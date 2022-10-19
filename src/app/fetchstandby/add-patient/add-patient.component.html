@@ -1,0 +1,99 @@
+<form [formGroup]="profileForm" (ngSubmit)="saveNewPatient()">
+<div class="addPatientCard">
+    <mat-card>
+        <div class="addPatient">
+            <div class="card-container">
+                <mat-card-title > Add Patient </mat-card-title>                    
+                <div class="appoitmentType" (click)="close()"><mat-icon class="icon-display">close</mat-icon></div>
+            </div>
+           <mat-divider inset></mat-divider>
+            <mat-card-content>
+                <div class="addPatientForm">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-icon matPrefix>search</mat-icon>
+                        <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options " [value]="option">
+                                {{option.name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>                   
+                </div>
+            </mat-card-content>
+          
+            <mat-card-content>
+                <div class="addPatientForm">
+                    <mat-form-field class="example-full-width" appearance="fill">                        
+                            <mat-select  placeholder="Select Pet" formControlName="petlist">
+                                <mat-option *ngFor="let petlist of petlists " [value]="petlist">
+                                    {{petlist.name}}
+                                </mat-option>                              
+                            </mat-select>                       
+                    </mat-form-field>                   
+                </div>
+            </mat-card-content>
+            <mat-card-content>
+                <div class="addPatientForm">
+                    <mat-form-field class="example-full-width" appearance="fill">                        
+                        <mat-select  placeholder="Select Appointment Type" formControlName="appointmenttype">
+                            <mat-option *ngFor="let appointmenttype of appointmenttypes " [value]="appointmenttype">
+                                {{appointmenttype.name}}
+                            </mat-option>                              
+                        </mat-select>                       
+                    </mat-form-field>                   
+                </div>
+            </mat-card-content>
+            <mat-card-content>
+                <div class="addPatientForm">
+                    <mat-form-field class="example-full-width" appearance="fill">                        
+                        <mat-select  placeholder="Select Appointment Reasons"  formControlName="appointmentreason">
+                            <mat-option *ngFor="let appointmentreason of appointmentreasons " [value]="appointmentreason">
+                                {{appointmentreason.name}}
+                            </mat-option>                              
+                        </mat-select>                    
+                    </mat-form-field>                   
+                </div>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <br>
+            <mat-card-content>
+                <div class="addPatientForm">
+                    <mat-card-title>Severity</mat-card-title>                   
+                <mat-radio-group formControlName="options"
+                  aria-labelledby="severity-radio-group-label"
+                  class="severity-radio-group">
+                  <mat-radio-button class="severity-radio-button" *ngFor="let severity of severities"  [value]="severity">
+                    {{severity}}
+                  </mat-radio-button>
+                </mat-radio-group>
+                  
+            </div>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <br>
+            <mat-card-content>
+                <div class="addPatientForm">   
+                    <mat-card-title>Notes</mat-card-title> 
+                    <div style=" background-color: white;">
+                        <mat-form-field class="example-full-width">                    
+                            <textarea matInput rows="5" cols="40"
+                             placeholder="Enter Note" 
+                            formControlName="notes"></textarea>
+                          </mat-form-field>        
+                    </div>
+                            
+                </div>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <br>
+            <mat-card-content>
+                <div class="addPatientForm">            
+                <button mat-raised-button class="addPatientButton" style="background-color: gray;" [disabled]="profileForm.invalid">Add Patient</button>                 
+                </div>
+            </mat-card-content>            
+        </div>
+    </mat-card>
+</div>
+</form>
+
+
